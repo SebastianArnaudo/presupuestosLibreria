@@ -44,14 +44,14 @@ def main():
         botonIngresar=tk.Button(extra,text="Ingresar valor",command=calcular)
         botonIngresar.place(x=170,y=200)
 
-        
-
-
-
-
-
-
-    
+    def limpiar():
+        eHojas.delete(0,tk.END)
+        ePrecioHojas.delete(0,tk.END)
+        eCartulina.delete(0,tk.END)
+        ePrecioCartulina.delete(0,tk.END)
+        eCantidadImpresion.delete(0,tk.END)
+        ePrecioImpresion.delete(0,tk.END)
+        eValorExtra.delete(0,tk.END)
     
     def presupuesto():
         cantidadHojas=eHojas.get()
@@ -114,7 +114,10 @@ def main():
     botonCalculo.place(x=150, y=400)
 
     botonExtra= tk.Button(text="Calcular Extra",command= extras)
-    botonExtra.place(x=150,y=450)
+    botonExtra.place(x=250,y=400)
+
+    botonLimpiar= tk.Button(text="Limpiar Formulario",command= limpiar)
+    botonLimpiar.place(x=160,y=450)
 
     tk.mainloop()
 
